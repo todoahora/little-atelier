@@ -1,4 +1,4 @@
-const CACHE='little-atelier-v1';
+const CACHE='little-atelier-v2';
 const FILES=['./','./index.html','./manifest.webmanifest','./icon-180.png','./brand-mark.svg','./icon-192.png','./icon-512.png','./atelier-cloud.js','./firebase-config.js'];
 const allowed=new Set(FILES.map(path=>new URL(path,self.registration.scope).href));
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting())));
